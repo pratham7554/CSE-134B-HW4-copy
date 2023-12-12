@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Ysabeau+SC:wght@300&display=swap');
+:root {
+  --dark-blue: #34b1f0;
+  --blue: #a8dbff;
+  --lighter-blue: #20bcff;
+  --light-gray: #e6e6e6;
+}
+
+
+/* Desktop */
+@media screen and (min-width: 641px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  /* workex blocks */
+  .workex {
+    width: 65ch;
+  }
+
+  .workex img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* research blocks */
+  .research {
+    width: 65ch;
+  }
+  .research img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Gallery block */
+  .gallery {
+    width: 80ch;
+  }
+  .gallery img {
+    box-align: center;
+    max-width: 100%;
+    height: auto
+  }
+
+  /* Contact block */
+  .contact {
+    width: 65ch;
+  }
+
+  /* coursework block */
+  .coursework-list {
+    margin-top: 25px;
+  }
+
+  .coursework-list li {
+    font-size: 1.2rem;
+  }
+
+  .coursework-list p {
+    padding: 0;
+    margin: 0;
+    width: 70%;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  /* workex blocks */
+  .workex {
+    width: 55ch;
+  }
+
+  /* research blocks */
+  .research {
+    width: 55ch;
+  }
+
+  /* gallery block */
+  .gallery {
+    width: 65ch;
+  }
+
+  .gallery img {
+    box-align: center;
+    max-width: 70%;
+    height: auto
+  }
+
+  /* contact blocks */
+  .contact {
+    width: 55ch;
+  }
+
+  /* coursework block */
+  .coursework-list {
+    width: 55ch;
+  }
+}
+
+/* Smart Phone */
+@media screen and (max-width: 640px) {
+  h2 {
+    font-size: 1.7em;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 2vh 10px;
+  }
+  /* workex blocks */
+  .workex {
+    width: 70%;
+  }
+
+  .workex img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* research blocks */
+  .research {
+    width: 80%;
+  }
+
+  .research img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Gallery block */
+  .gallery {
+    width: auto;
+  }
+
+  .gallery img {
+    box-align: center;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* contact blocks */
+  .contact {
+    width: 80%;
+  }
+
+  /* coursework blocks */
+  .coursework-list {
+    width: 80%;
+    text-align: center;
+  }
+
+  .coursework-list span {
+    display: none;
+  }
+
+  .coursework-list p {
+    width: 100%;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* header */
+header {
+  background-color: var(--light-gray);
+  position: sticky;
+  top: 0.5;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  aspect-ratio: 1/1;
+  padding: 0.5vw;
+  background-color: var(--blue);
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0;
+  margin-left: 15px;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 > span {
+  display: inline-flex;
+  color: rgb(95, 95, 95);
+  font-size: 0.65em;
+}
+
+/* contact block */
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  /* align-items: center; */
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  opacity: 0;
+  animation: fade-in 1s forwards, fly-in-right 1s forwards;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact h2 {
+  text-align: center;
+  font-weight: bold;
+}
+label {
+  /* padding: 12px 12px 12px 0;
+  display: inline-block; */
+  margin-bottom: 5px;
+}
+input, textarea {
+  /* width: 80%; */
+  background-color: var(--lighter-blue);
+  color: white;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  position: center;
+  background-color: var(--lighter-blue)
+}
+
+output {
+  color: red;
+  margin-bottom: 10px;
+}
+
+output.info {
+  color: green;
+}
+
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+footer {
+  margin-top: 25px;
+  background-color: var(--light-gray);
+}
+
+footer div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  column-gap: 15px;
+}
+
+footer a {
+  width: 30px;
+  height: 30px;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fly-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fly-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+}
