@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="helper.css"> 
+        <meta name="description" content="contact">
+        <link href="images/logo-no-background.png" rel="icon">
+        <title>Contact</title>
+        <style>
+            :root {
+                --my-light-black: #202020;
+                --my-white: #ffffff;
+                --my-dark-grey: #2f2f2f;
+                --my-box--color: #303030;
+            }
+            .dark-mode{
+                background-color: var(--my-light-black);
+                color: var(--my-white);
+            }
+            .dark-mode header{
+                background-color: var(--my-dark-grey);
+            }
+            .dark-mode footer{
+                background-color: var(--my-dark-grey);
+            }
+            .dark-mode .contact{
+                background-color: var(--my-box--color);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a>
+                    <img src="images/icons8-home-100.png" alt="home icon">
+                </a>
+                <h1>Contact</h1>
+                <button class="toggle" id="toggleTheme">Dark Mode</button>
+            </nav>   
+        </header>
+        <noscript>
+            <p>Dark Mode is not available due to JavaScript's absence</p>
+        </noscript>
+        <main>
+            <div class="contact">
+                <h2>GET IN TOUCH</h2>
+                <form id="contactForm" action="https://httpbin.org" method="get">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" required>
+                        <output for="name" id="name-error" class="error-output"></output>
+
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" required>
+                        <output for="email" id="email-error" class="error-output"></output>
+
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" minlength="10" maxlength="200" pattern="^[a-zA-Z0-9.,!? ]*${1,200}" required></textarea>
+                        <output for="comments" id="comments-info" class="info-output"></output>
+                        <output for="comments" id="comments-error" class="error-output"></output>
+
+                        <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                        <input type="hidden" id="form-errors" name="form-errors" value="">
+
+                        <button type="submit">SUBMIT</button>
+                </form>
+                <div class="output-container">
+                    <output for="name" class="error-output"></output>
+                    <output for="name" class="info-output"></output>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>All rights reserved</p>
+            <div class = "footerclass">
+                <a href="https://github.com/pratham7554">
+                    <img src="images/git.png" alt="GitHub" width="30" height="30">
+                </a>
+                <a href="https://www.linkedin.com/in/pratham-mittal-8161b3223">
+                    <img src="images/linkedIn.png" alt="LinkedIn" width="30" height="30">
+                </a>
+                <a href="https://twitter.com/home">
+                    <img src="images/twitter.jpeg" alt="Twitter" width="30" height="30">
+                </a>
+                <a href="https://instagram.com/pratham_mittal?igshid=MW54OTNndHVyb2NpYg==">
+                    <img src="images/ig.jpeg" alt="Instagram" width="30" height="30">
+                </a>
+            </div>
+        </footer>
+        <script src="new_script.js"></script>
+    </body>
+</html>
